@@ -1,0 +1,25 @@
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  margin: 2%;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+.centered {
+  text-align: center;
+  padding-right: 25%;
+  padding-left: 25%;
+}
+
+.spaced {
+  margin: 2%;
+}
+
+#sharebtn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
