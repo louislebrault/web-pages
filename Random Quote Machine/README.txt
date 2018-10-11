@@ -1,3 +1,5 @@
-Random Quote Machine simply retrieves a random quote when the button is pressed.
+Random Quote Machine simply retrieves a random quote when a button is pressed.
 
-API: https://forismatic.com/en/ 
+API from https://forismatic.com/en/
+Built using https://codepen.io/
+As part of https://www.freecodecamp.org/
