@@ -4,6 +4,7 @@ $(document).ready(function() {
   navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
   // Success function
   function geoSuccess(Position) {
+    //console.log("geosuccess");
     
     // Define vars
     var lat_current = Position.coords.latitude;
@@ -13,6 +14,7 @@ $(document).ready(function() {
     
     // Get location data
     $.getJSON(googleURL_current, function(data) {
+      //console.log("getJSON1 success");
       $(".location").empty();  // Empty location html
       
       // Initialise variables
