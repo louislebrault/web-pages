@@ -4,7 +4,6 @@ $(document).ready(function() {
   navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
   // Success function
   function geoSuccess(Position) {
-    //console.log("geosuccess");
     
     // Define vars
     var lat_current = Position.coords.latitude;
@@ -12,15 +11,8 @@ $(document).ready(function() {
     var weatherURL_current = "https://fcc-weather-api.glitch.me/api/current?lat=" + lat_current + "&lon=" + lng_current ;
     var googleURL_current = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat_current + "," + lng_current + "&key=AIzaSyBerNeGKkI_LEN5o88RgL-sJHQ8xgmSk4o";
     
-   /* 
-   // Send coordinates to html
-   var element = document.getElementById('geolocation');
-   element.innerHTML = "Latitude: " + Position.coords.latitude + "<br> Longitude: " + Position.coords.longitude;
-   */
-    
     // Get location data
     $.getJSON(googleURL_current, function(data) {
-      //console.log("getJSON1 success");
       $(".location").empty();  // Empty location html
       
       // Initialise variables
@@ -52,7 +44,6 @@ $(document).ready(function() {
     
     // Get weather data
     $.getJSON(weatherURL_current, function(data) {
-      //console.log("weather JSON");
       
       // Initialise and store variables
       var detail_current = data.weather[0].description;
@@ -82,8 +73,6 @@ $(document).ready(function() {
           $(".temp").empty().append(temp_main_c.toFixed(2) + celcius);
         }
       
-      //console.log("click");
-      //console.log($(".switch").val("data-off"));
       });
     }); // Weather JSON END
    } // geoSuccess END
